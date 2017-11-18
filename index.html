@@ -12,14 +12,19 @@
     <header>
       <img class="logo" src="assets/images/logo-laboratoria.svg" alt="laboratoria">
     </header>
-    
-      <aside id="profile">  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis fugiat laudantium vitae aspernatur minus eligendi quibusdam mollitia voluptates quae quo a, iste laborum iusto ab nemo modi provident adipisci soluta!
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores vitae ad architecto et voluptate molestias repudiandae atque error quae, officiis beatae, magnam ex id eligendi reprehenderit numquam. Quibusdam voluptatum, fugiat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod accusamus quasi nulla incidunt aliquid aut corporis recusandae numquam, hic.</p></aside>
+    <!-- sección lateral, cotiene datos del perfil -->
+    <aside id="profile"> 
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores vitae ad architecto et voluptate molestias repudiandae atque error quae, officiis beatae, magnam ex id eligendi reprehenderit numquam. Quibusdam voluptatum, fugiat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod accusamus quasi nulla incidunt aliquid aut corporis recusandae numquam, hic.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut nihil dicta est vero quod enim minus obcaecati, sint mollitia fuga culpa repudiandae adipisci odio expedita ratione debitis quasi. Dolore, officia.</p>
+    </aside>
+
+    <!-- contenido central -->
     <main>
-      <div id="menu">
-        <a href="#" id="gen">
-          <h1>Generación <i class="fa fa-caret-down" aria-hidden="true"></i></h1>
-        </a>
+      <!--menú principal para navegar en pestañas  -->
+      <nav id="menu">
+        
+          <h1><a href="#" id="gen">Generación <i class="fa fa-caret-down" aria-hidden="true"></i></a></h1>
+        
         <a href="#" id="over">
           Overview 
           <i class="fa fa-bar-chart" aria-hidden="true"></i>
@@ -32,21 +37,27 @@
         Jedis
         <i class="fa fa-users" aria-hidden="true"></i>
       </a>
-      </div>
+      </nav>
+
+      <!-- contenedor que se muestra por defecto -->
       <div id="overview">
         <img src="assets/images/rectangular-graphic.png" alt="">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quo quibusdam voluptas quae iusto, eos voluptatibus temporibus tempora voluptatum, sapiente expedita eligendi distinctio dolores odio soluta inventore velit quaerat neque.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, aspernatur excepturi doloribus reiciendis est sequi possimus asperiores praesentium sapiente, vero ducimus fugiat nobis rerum et! Tenetur corrupti, velit ipsum eos.</p>
         <img src="assets/images/circle-graphic.png" alt="">
       </div>
+
+      <!-- contenedor con información de estudiantes -->
       <div id="students" class="ocultar">
         <img src="assets/images/circle-graphic.png" alt="">
        
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quo quibusdam voluptas quae iusto, eos voluptatibus temporibus tempora voluptatum, sapiente expedita eligendi distinctio dolores odio soluta inventore velit quaerat neque.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, aspernatur excepturi doloribus reiciendis est sequi possimus asperiores praesentium sapiente, vero ducimus fugiat nobis rerum et! Tenetur corrupti, velit ipsum eos.</p>
          <img src="assets/images/rectangular-graphic.png" alt="">
-        
+    
       </div>
+
+      <!-- contendor información de jedis -->
       <div id="jedis" class="ocultar">
           <img src="assets/images/graph.png" alt="">
      
@@ -54,8 +65,10 @@
         <img src="assets/images/circle-graphic.png" alt="">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui praesentium, atque sunt doloribus modi officia eius voluptate iste cupiditate voluptatibus eaque provident. Cumque aliquam, iste repudiandae dolorem autem at laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem eligendi incidunt ipsum, autem dolore eos ipsam reiciendis voluptas veritatis repellat fugit consequatur perspiciatis quod blanditiis provident architecto hic, error, quis!</p>
       </div>
+
     </main>
-    <footer></footer>
+    
+    
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>
 		<!-- Aquí va tus archivos JS -->
