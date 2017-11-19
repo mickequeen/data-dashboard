@@ -38,3 +38,23 @@ lkover.addEventListener('click', function(){
 	jedisContainer.classList.add('ocultar');
 	overContainer.classList.remove('ocultar');
 })
+
+
+/*Overview SCL16-2*/
+
+var deserters = document.getElementById("deserters");
+
+/*Recorro  a las alumnas dentro de la base de datos,
+para saber cuantas han desertado*/
+
+for (var i = 0; i < data.SCL['2016-2'].students.length; i++) {
+	console.log(data.SCL['2016-2'].students[i].active);
+	var parrafo = document.createElement('p');
+	var nodoParrafo = document.createTextNode('La estudiante número ' + [i + 1] + ' está: ' + data.SCL['2016-2'].students[i].active);
+	parrafo.appendChild(nodoParrafo);
+	deserters.appendChild(parrafo);
+}
+
+/*Esto es una prueba*/
+
+	
