@@ -137,6 +137,9 @@ margin:0;
 #links-profile a {
 	text-align: center;
 	padding-left: 0,5em;
+	color: rgb(92, 89, 89);
 }
 
-
+#links-profile a:hover{
+	background-color: rgb(255, 183, 0);
+}
