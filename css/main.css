@@ -29,7 +29,7 @@ aside{
 	background-color: #F7F7F7;
 	height: auto;
 	display: inline-block;
-	width: 17%;
+	width: 18%;
 	position: fixed;
 	padding: 1em;
 }
@@ -47,7 +47,7 @@ main{
 	height: 7em;
 	background-color: #E1E1E1;
 	display: inline-block;
-	padding-left: 3em;
+	padding-left: 0;
 }
 
 /*quitar aspecto de link a menú*/
@@ -55,6 +55,47 @@ a{
 	text-decoration: none;
 	margin-right: 2em;
 }
+
+/*Estilizando elementos del menú*/
+#generaciones{
+	margin:0;
+	width:9.5% ;
+}
+
+#generaciones ul{
+	list-style: none;
+	font-size: 1.1em;
+}
+
+.gen li a{
+background-color: rgb(255, 183, 0);
+border: 1px solid #E0E0E0;
+color:rgb(92, 89, 89);
+text-align: center;
+display:block;
+margin:0;
+}
+
+.gen li a:hover{
+	background-color: rgb(214, 176, 80);
+}
+
+/*Los li directos de gen tendran la propiedad float left*/
+.gen > li{
+	float: left;
+}
+
+/* Los ul de gen no serán visibles hasta hacer hover*/
+ .gen li ul{
+	   display: none ;
+	   position: absolute;
+	   min-width: 8.7em;
+}
+	
+.gen li:hover > ul{
+	display:block
+}
+
 
 #overview{
 	background-color: #ECEC93;
@@ -79,3 +120,23 @@ a{
 .ocultar{
 	display: none;
 }
+
+#photo {
+	text-align: center;
+	padding-bottom: 2em;
+	
+}
+
+#links-profile ul {
+	list-style: none;
+	font-size: 1em;
+	line-height: 1.5;
+	padding-top: 5em;
+}
+
+#links-profile a {
+	text-align: center;
+	padding-left: 0,5em;
+}
+
+
