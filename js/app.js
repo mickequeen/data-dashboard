@@ -18,6 +18,12 @@ var overContainer= document.getElementById('overview');
 var studentsContainer= document.getElementById('students');
 var jedisContainer= document.getElementById('jedis');
 
+/*evento al clickear generación*/
+lkgen.addEventListener('click', function(){
+	
+})
+
+
 /*evento al clickear el link de estudiantes*/
 lkstud.addEventListener('click', function(){
 	overContainer.classList.add('ocultar');
