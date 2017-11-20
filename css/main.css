@@ -144,7 +144,7 @@ a{
 	background-color: #FFF;
 }
 
-
+/*Estilizando datos de Overview*/
 #deserters{
 	width: 35%;
     background-color: #E1E1E1;
@@ -153,20 +153,39 @@ a{
     vertical-align: top;
 }
  #deserters h1{
-	 color: purple;
-	 text-align: center;
+	 color:rgb(41, 39, 39);
+	 border: 1px solid purple;
+	 background-color: rgb(112, 82, 112);
 	 
  }
 
  #deserters p{
 	 font-size: 1em; 
  }
+
+ /*Grafico inactivas generacion 2017-2*/
 #chart1{
 	background-color: #E1E1E1;
-	width:40% ;
+	width:30% ;
 	height:auto;
 	display: inline-block;
 	left: 28em;
 	bottom: 7em;
-	float: right;
+}
+
+#deserters1701 {
+
+	background-color: #E1E1E1;
+	width:30%;
+}
+
+#deserters1701 h1 {
+	color:rgb(41, 39, 39);
+	border: 1px solid purple;
+	background-color: rgb(112, 82, 112);
+}
+
+/*grafico inactivas generacion 2017-1*/
+#charts2{
+	width:30%;
 }

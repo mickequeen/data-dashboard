@@ -99,7 +99,11 @@ var total=contActivas+contInactivas;
 /*crear elementos*/
 var inactivas= document.createTextNode('Alumnas inactivas: ' + contInactivas);
 var activas= document.createTextNode('Alumnas activas : ' + contActivas);
+<<<<<<< d3f742c9f3d2e589c5da958ee6a4d25eddf0badd
 var totalTXT= document.createTextNode('Total de alumnas : ' +total);
+=======
+var totalTXT= document.createTextNode('Total de alumnas generación : ' +total);
+>>>>>>> Agregandocambiosoverview
 var parrafo1= document.createElement('p');
 var parrafo2= document.createElement('p');
 var parrafo3= document.createElement('p');
@@ -148,4 +152,76 @@ grafica1.draw(data1,opciones1);
 
 }
 
-                            /**/
+							/**/
+							
+/*generacion1701*/
+
+var deserters1701 = document.getElementById("deserters1701");
+
+var activeStudents2 = [];
+
+for (var i = 0; i < data.SCL['2017-1'].students.length; i++) {
+	activeStudents2.push(data.SCL['2017-1'].students[i].active);
+}
+var contInactivas2 = 0;
+var contActivas2 = 0;
+
+for (var i = 0; i < activeStudents2.length; i++) {
+	if (activeStudents2[i] == false) {
+		contInactivas2++
+	}
+	if (activeStudents2[i] == true) {
+		contActivas2++
+	}
+}
+var total2 = contActivas2 + contInactivas2;
+
+
+/*crear elementos*/
+var inactivas2 = document.createTextNode('Alumnas inactivas: ' + contInactivas2);
+var activas2 = document.createTextNode('Alumnas activas : ' + contActivas2);
+var totalTXT2 = document.createTextNode('Total de alumnas generación : ' + total2);
+var parrafo3 = document.createElement('p');
+var parrafo4 = document.createElement('p');
+var parrafo5 = document.createElement('p');
+var gen20171 = document.createElement('div');
+
+/*dar hijos a padres*/
+parrafo3.appendChild(inactivas2);
+parrafo4.appendChild(activas2);
+parrafo5.appendChild(totalTXT2);
+gen20171.appendChild(parrafo3);
+gen20171.appendChild(parrafo4);
+gen20171.appendChild(parrafo5);
+deserters1701.appendChild(gen20171);
+ 
+/*Gráfico 2*/
+google.load("visualization", "1.0", {
+	"packages": ["corechart"]
+});
+
+google.setOnLoadCallback(dibujar);
+
+function dibujar2() {
+
+	var data2 = new google.visualization.DataTable();
+	data2.addColumn("string", "Alumnas");
+	data2.addColumn("number", "Actividad");
+
+	data2.addRows(
+		[
+			["Activas", 14],
+
+			["Inactivas", 9],
+		]
+	);
+
+	var opciones2 = {
+		title: "Alumnas",
+		pieHole: 0.3,
+	};
+
+	var grafica2 = new google.visualization.PieChart(document.getElementById("chart2"));
+	grafica2.draw(data2, opciones2);
+
+}
