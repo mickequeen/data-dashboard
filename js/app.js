@@ -55,11 +55,8 @@ lkstud.addEventListener('click', function(){
 	parrName.appendChild(nombre);
 	contDatos.appendChild(parrName);
 	contInf.appendChild(contDatos);
-	
 	contEst.appendChild(contInf);
 	}
-
-
 
 
 })

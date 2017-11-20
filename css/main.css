@@ -121,19 +121,11 @@ a{
 
 #photo{
     text-align: center;
-    padding-bottom: 2em;
 }
-#links-profile ul{
-    list-style: none;
-    font-size: 1em;
-    line-height: 1.5;
-    padding-top: 5em;
-    
-}
-#links-profile a{
-    text-align: center;
-    padding-left: 1em;
-}
+
+#links-profile{
+	padding-left: 1em;
+} 
 
 /*estilo contenedor total de estudiantes*/
 #contEst{
