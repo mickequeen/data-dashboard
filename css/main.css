@@ -146,12 +146,20 @@ a{
 
 
 #deserters{
-	width: 30%
+	width: 30%;
+    background-color: #E1E1E1
 }
+ #deserters h1{
+	 color: purple;
+	 text-align: center;
+	 padding-left:1em;
+ }
 
-
+ #deserters p{
+	 font-size: 1em; 
+ }
 #chart1{
-	background-color: palevioletred;
+	background-color: #E1E1E1;
 	width:40% ;
 	height:auto;
 	position:relative;

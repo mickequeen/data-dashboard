@@ -97,9 +97,9 @@ contActivas++
 var total=contActivas+contInactivas;
 
 /*crear elementos*/
-var inactivas= document.createTextNode('alumnas inactivas gen 2017-2: ' + contInactivas);
-var activas= document.createTextNode('alumnas activas 2017-2: ' + contActivas);
-var totalTXT= document.createTextNode('total de alumnas generación 2017-2: ' +total);
+var inactivas= document.createTextNode('Alumnas inactivas: ' + contInactivas);
+var activas= document.createTextNode('Alumnas activas : ' + contActivas);
+var totalTXT= document.createTextNode('Total de alumnas generación 17-2 : ' +total);
 var parrafo1= document.createElement('p');
 var parrafo2= document.createElement('p');
 var parrafo3= document.createElement('p');
@@ -113,7 +113,7 @@ gen20172.appendChild(parrafo1);
 gen20172.appendChild(parrafo2);
 gen20172.appendChild(parrafo3);
 deserters.appendChild(gen20172);
-/*Esto es una prueba*/
+
 
 	
 /*Grafico 1*/
@@ -135,8 +135,7 @@ data1.addRows(
 		["Activas",26],
 
 		["Inactivas",33],
-
-	]
+    ]
 );
 
 var opciones1 = {
@@ -149,3 +148,4 @@ grafica1.draw(data1,opciones1);
 
 }
 
+                            /**/
