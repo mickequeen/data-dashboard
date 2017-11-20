@@ -10,7 +10,6 @@ console.log(data);
 
 /*variables globales*/
 var main= document.getElementsByTagName('main');
-var lkgen= document.getElementById('gen');
 var lkover= document.getElementById('over');
 var lkstud= document.getElementById('stud');
 var lkteach= document.getElementById('teachers');
@@ -18,35 +17,45 @@ var overContainer= document.getElementById('overview');
 var studentsContainer= document.getElementById('students');
 var jedisContainer= document.getElementById('jedis');
 
-/*evento al clickear generación*/
-lkgen.addEventListener('click', function(){
-	
-})
 
 
 /*evento al clickear el link de estudiantes*/
 lkstud.addEventListener('click', function(){
+	lkstud.classList.add('select');
+	lkover.classList.remove('select');
+	lkteach.classList.remove('select');
 	overContainer.classList.add('ocultar');
 	jedisContainer.classList.add('ocultar');
-	studentsContainer.classList.remove('ocultar')
+	studentsContainer.classList.remove('ocultar');
+
 
 	var contEst= document.getElementById('contEst');
 	/*crear elementos*/
-
-
-
 	
 	for(var i=0;i<data.SCL['2017-2'].students.length;i++){
 	
-	
+	/*datos que  con cada ciclo del for*/
 	var nombre= document.createTextNode(data.SCL['2017-2'].students[i].name);
+	var imgSRC= (data.SCL['2017-2'].students[i].photo);
 
+
+	/*elementos, contenedores y clases*/
 	var contInf= document.createElement('div');
-	contInf.setAttribute('class', 'white');
+	contInf.setAttribute('class', 'studentsContainer');
+	var img= document.createElement('img');
+	img.setAttribute('src', imgSRC);
+	img.setAttribute('class', 'profilePicture');
+	var contDatos= document.createElement('div');
+	contDatos.setAttribute('class', 'datoAlumna')
 	var parrName=document.createElement('p');
+	parrName.setAttribute('class', 'pName');
+
 	/*dar padres a hijos*/
+	contInf.appendChild(img);
 	parrName.appendChild(nombre);
-	contInf.appendChild(parrName);
+	contDatos.appendChild(parrName);
+	contInf.appendChild(contDatos);
+	
 	contEst.appendChild(contInf);
 	}
 
@@ -60,6 +69,9 @@ lkteach.addEventListener('click', function(){
 	overContainer.classList.add('ocultar');
 	studentsContainer.classList.add('ocultar');
 	jedisContainer.classList.remove('ocultar');
+	lkstud.classList.remove('select');
+	lkover.classList.remove('select');
+	lkteach.classList.add('select');
 })
 
 /*evento al click de link overview*/
@@ -67,6 +79,9 @@ lkover.addEventListener('click', function(){
 	studentsContainer.classList.add('ocultar');
 	jedisContainer.classList.add('ocultar');
 	overContainer.classList.remove('ocultar');
+	lkstud.classList.remove('select');
+	lkover.classList.add('select');
+	lkteach.classList.remove('select');
 })
 
 
