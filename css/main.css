@@ -73,6 +73,7 @@ a{
 /*estilo contenedor students*/
 #students{
 	background-color: #B2F0B2;
+	height: 100em;
 }
 
 .fa-search{
@@ -121,4 +122,13 @@ input{
 }
 
 
+#contEst{
+	background-color: red;
+	height: auto;
+	width: 30em;
+	float: right;
+}
 
+.white{
+	background-color: #FFF;
+}

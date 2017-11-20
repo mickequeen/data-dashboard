@@ -29,6 +29,30 @@ lkstud.addEventListener('click', function(){
 	overContainer.classList.add('ocultar');
 	jedisContainer.classList.add('ocultar');
 	studentsContainer.classList.remove('ocultar')
+
+	var contEst= document.getElementById('contEst');
+	/*crear elementos*/
+
+
+
+	
+	for(var i=0;i<data.SCL['2017-2'].students.length;i++){
+	
+	
+	var nombre= document.createTextNode(data.SCL['2017-2'].students[i].name);
+
+	var contInf= document.createElement('div');
+	contInf.setAttribute('class', 'white');
+	var parrName=document.createElement('p');
+	/*dar padres a hijos*/
+	parrName.appendChild(nombre);
+	contInf.appendChild(parrName);
+	contEst.appendChild(contInf);
+	}
+
+
+
+
 })
 
 /*evento al click en link de jedis*/
@@ -64,3 +88,5 @@ for (var i = 0; i < data.SCL['2016-2'].students.length; i++) {
 /*Esto es una prueba*/
 
 	
+
+
