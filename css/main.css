@@ -68,12 +68,15 @@ a{
 }
 
 /*estilo contenedor vista*/
-#overview{
+#overviews{
 
-	}
+}
+
+	
 
 /*estilo contenedor students*/
 #students{
+
 }
 
 /*estilo checkbox students*/
@@ -102,13 +105,12 @@ a{
 	padding: 0.5em;
 	border-radius: 0.3em;
 	width: 35em;
-	display: inline-block;
 	float: right;
 }
 
 /*estilos contenedor jedis*/
 #jedis{
-
+	
 }
 
 /*clase a utilizar para ocultar contenedores*/
@@ -156,8 +158,7 @@ a{
 	 color:rgb(41, 39, 39);
 	 border: 1px solid purple;
 	 background-color: rgb(112, 82, 112);
-	 
- }
+}
 
  #deserters p{
 	 font-size: 1em; 
@@ -186,6 +187,3 @@ a{
 }
 
 /*grafico inactivas generacion 2017-1*/
-#charts2{
-	width:30%;
-}
