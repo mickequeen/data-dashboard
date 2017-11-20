@@ -132,3 +132,18 @@ input{
 .white{
 	background-color: #FFF;
 }
+
+
+#deserters{
+	width: 30%
+}
+
+
+#chart1{
+	background-color: palevioletred;
+	width:40% ;
+	height:auto;
+	position:relative;
+	left: 28em;
+	bottom: 7em;
+}

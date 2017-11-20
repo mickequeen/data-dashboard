@@ -77,9 +77,13 @@ var deserters = document.getElementById("deserters");
 /*Recorro  a las alumnas dentro de la base de datos,
 para saber cuantas han desertado*/
 
-var activeStudents=[];for (var i=0; i<data.SCL['2017-2'].students.length;i++){
+var activeStudents=[];
+
+for (var i=0; i<data.SCL['2017-2'].students.length;i++){
 activeStudents.push(data.SCL['2017-2'].students[i].active);
 }
+
+
 var contInactivas=0;
 var contActivas=0;
 
@@ -112,5 +116,36 @@ deserters.appendChild(gen20172);
 /*Esto es una prueba*/
 
 	
+/*Grafico 1*/
 
+google.load("visualization", "1.0", {
+	"packages": ["corechart"]
+});
+
+google.setOnLoadCallback(dibujar);
+
+function dibujar(){
+
+var data1 = new google.visualization.DataTable();
+data1.addColumn("string", "Alumnas");
+data1.addColumn("number", "Actividad");
+
+data1.addRows(
+	[
+		["Activas",26],
+
+		["Inactivas",33],
+
+	]
+);
+
+var opciones1 = {
+	title: "Alumnas",
+	pieHole: 0.3,
+};
+
+var grafica1 = new google.visualization.PieChart(document.getElementById("chart1"));
+grafica1.draw(data1,opciones1);
+
+}
 
