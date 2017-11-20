@@ -99,7 +99,7 @@ var total=contActivas+contInactivas;
 /*crear elementos*/
 var inactivas= document.createTextNode('Alumnas inactivas: ' + contInactivas);
 var activas= document.createTextNode('Alumnas activas : ' + contActivas);
-var totalTXT= document.createTextNode('Total de alumnas generación 17-2 : ' +total);
+var totalTXT= document.createTextNode('Total de alumnas : ' +total);
 var parrafo1= document.createElement('p');
 var parrafo2= document.createElement('p');
 var parrafo3= document.createElement('p');
