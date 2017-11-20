@@ -192,3 +192,32 @@ gen20171.appendChild(parrafo5);
 deserters1701.appendChild(gen20171);
  
 /*Gráfico 2*/
+google.load("visualization", "1.0", {
+	"packages": ["corechart"]
+});
+
+google.setOnLoadCallback(dibujar2);
+
+function dibujar2() {
+
+	var data2 = new google.visualization.DataTable();
+	data2.addColumn("string", "Alumnas");
+	data2.addColumn("number", "Actividad");
+
+	data2.addRows(
+		[
+			["Activas", 14],
+
+			["Inactivas", 9],
+		]
+	);
+
+	var opciones2 = {
+		title: "Alumnas",
+		pieHole: 0.3,
+	};
+
+	var grafica2 = new google.visualization.PieChart(document.getElementById("chart2"));
+	grafica2.draw(data2, opciones2);
+
+}
