@@ -77,14 +77,38 @@ var deserters = document.getElementById("deserters");
 /*Recorro  a las alumnas dentro de la base de datos,
 para saber cuantas han desertado*/
 
-for (var i = 0; i < data.SCL['2016-2'].students.length; i++) {
-	console.log(data.SCL['2016-2'].students[i].active);
-	var parrafo = document.createElement('p');
-	var nodoParrafo = document.createTextNode('La estudiante número ' + [i + 1] + ' está: ' + data.SCL['2016-2'].students[i].active);
-	parrafo.appendChild(nodoParrafo);
-	deserters.appendChild(parrafo);
+var activeStudents=[];for (var i=0; i<data.SCL['2017-2'].students.length;i++){
+activeStudents.push(data.SCL['2017-2'].students[i].active);
 }
+var contInactivas=0;
+var contActivas=0;
 
+for(var i=0; i<activeStudents.length;i++){
+if(activeStudents[i]==false){
+contInactivas++
+}if(activeStudents[i]==true){
+contActivas++
+}
+}
+var total=contActivas+contInactivas;
+
+/*crear elementos*/
+var inactivas= document.createTextNode('alumnas inactivas gen 2017-2: ' + contInactivas);
+var activas= document.createTextNode('alumnas activas 2017-2: ' + contActivas);
+var totalTXT= document.createTextNode('total de alumnas generación 2017-2: ' +total);
+var parrafo1= document.createElement('p');
+var parrafo2= document.createElement('p');
+var parrafo3= document.createElement('p');
+var gen20172= document.createElement('div');
+
+/*dar hijos a padres*/
+parrafo1.appendChild(inactivas);
+parrafo2.appendChild(activas);
+parrafo3.appendChild(totalTXT);
+gen20172.appendChild(parrafo1);
+gen20172.appendChild(parrafo2);
+gen20172.appendChild(parrafo3);
+deserters.appendChild(gen20172);
 /*Esto es una prueba*/
 
 	
