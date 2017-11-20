@@ -63,23 +63,34 @@ a{
 	padding-left: 4em;
 	padding-right: 4em;
 	padding-top: 2em;
+	background-color: #F0EBEB;
+	overflow: auto;
 }
 
 /*estilo contenedor vista*/
 #overview{
-	background-color: #ECEC93;
-}
+
+	}
 
 /*estilo contenedor students*/
 #students{
-	background-color: #B2F0B2;
-	height: 100em;
 }
+
+/*estilo checkbox students*/
+#selecGen{
+	background-color: #FFF;
+	height: 10em;
+	width: 12em;
+	display: inline-block;
+	padding: 1em;
+}
+
+
 
 .fa-search{
 	padding-right: 0.5em;
 }
-input{
+#buscar{
 	border:none;
 	width: 80%;
 	outline: none;
@@ -97,7 +108,7 @@ input{
 
 /*estilos contenedor jedis*/
 #jedis{
-	background-color: #B7C4FD;
+
 }
 
 /*clase a utilizar para ocultar contenedores*/
