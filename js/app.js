@@ -73,7 +73,7 @@ lkover.addEventListener('click', function(){
 /*Overview SCL17-2*/
 
 var deserters = document.getElementById("deserters");
-
+ 
 /*Recorro  a las alumnas dentro de la base de datos,
 para saber cuantas han desertado*/
 
@@ -132,14 +132,14 @@ data1.addColumn("number", "Actividad");
 
 data1.addRows(
 	[
-		["Activas",26],
+		["Activas [" + contActivas+"]",26],
 
-		["Inactivas",33],
+		["Inactivas ["+ contInactivas+ "]",33],
     ]
 );
 
 var opciones1 = {
-	title: "Alumnas",
+	title: "Alumnas Generación SCL 2017-2",
 	pieHole: 0.3,
 };
 
