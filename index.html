@@ -47,7 +47,7 @@
       <nav id="menu">
         
         <h1>        
-          <a href="#" id="over">
+          <a href="#" id="over" class="select">
             Overview 
             <i class="fa fa-bar-chart" aria-hidden="true"></i>
           </a>
@@ -79,19 +79,31 @@
 
       <!-- contenedor con información de estudiantes -->
       <section id="students" class="box ocultar">
-          <div id="selecGen">
-            <h1>Generación:</h1>
-            <input type="checkbox" id="SCL 2016-2">SCL 2016-2 <br>
-            <input type="checkbox">SCL 2017-1 <br>
-            <input type="checkbox">SCL 2017-2
+          <div id="seleccionar">
+            <div id="selecGen">
+              <h1>Generación:</h1>
+              <ul id="listGen">
+                <li>
+                  <a href="#" id="20162">SCL 2016-2</a>
+                </li>
+                <li>
+                <a href="#" id="20171">SCL 2017-1</a>
+                </li>
+                <li class="linkSelect">
+                <a href="#" id="20172">SCL 2017-2</a>
+                </li>
+              </ul>
+           </div>
           </div>
-          
-          <div id="buscador">
+          <div id="alumn">
+            <div id="buscador">
             <i class="fa fa-search" aria-hidden="true"></i><input id="buscar" type="text" placeholder="Buscar Alumna">
+            </div>
+            <div id="genAlumn"><h1 id="generacionEst">Generación SCL 2017-2</h1></div>
+            <div id="contEst2017_2" class="datos"></div>
+            <div id="contEst2016_1" class="datos"></div>
+            <div id="contEst2016_2" class="datos"></div>
           </div>
-          <h1 id="title">Generación SCL 2017-2</h1>
-          <div id="contEst"></div>
-
 
         
       </section>

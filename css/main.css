@@ -78,36 +78,93 @@ a{
 #students{
 
 }
-
+#seleccionar{
+	width: 17em;
+	height: 20em;
+	display: inline-block;
+}
 /*estilo checkbox students*/
 #selecGen{
 	background-color: #FFF;
 	height: 10em;
 	width: 12em;
 	display: inline-block;
+	float: left;
 	padding: 1em;
 }
 
+#listGen{
+	text-align: left;
+}
+#listGen li{
+	list-style: none;
+	background-color: #DAD2D2;
+	padding: 0.1;
+	margin-bottom: 0.2em;
+	border-radius: 0.2em;
+
+}
+
+#alumn{
+	display: inline-block;
+	float: right;
+	width: 50%;
+}
 /*tamaño icono lupa*/
 .fa-search{
 	padding-right: 0.5em;
 }
 
+
 /*div que contiene buscador y lupa*/
 #buscar{
 	border:none;
-	width: 80%;
+	width: 18em;
 	outline: none;
+	
 }
-
 /*estilos al buscador*/
 #buscador{
 	background-color: #FFF;
 	padding: 0.5em;
 	border-radius: 0.3em;
-	width: 35em;
+	width: 20em;
 	float: right;
 }
+
+#genAlumn{
+	float: right;
+	padding-right: 6em;
+}
+
+#generacionEst{
+	font-size: 2em;
+	color:#C495BB;
+}
+
+/*estilo contenedor total de estudiantes*/
+.datos{
+	background-color: red;
+	height: auto;
+	width: 30em;
+	
+	float: right;
+}
+
+/*estilo contenedor individual de estudiantes*/
+.studentsContainer{
+	background-color: #FFF;
+	margin: 1em;
+	padding: 1em;
+}
+
+/*estilo contenedor datos*/
+.datoAlumna{
+	display: inline-block;
+	vertical-align: top;
+	padding: 1em;
+}
+
 
 /*estilos contenedor jedis*/
 #jedis{
@@ -127,27 +184,6 @@ a{
 	padding-left: 1em;
 } 
 
-/*estilo contenedor total de estudiantes*/
-#contEst{
-	background-color: red;
-	height: auto;
-	width: 30em;
-	float: right;
-}
-
-/*estilo contenedor individual de estudiantes*/
-.studentsContainer{
-	background-color: #FFF;
-	margin: 1em;
-	padding: 1em;
-}
-
-/*estilo contenedor datos*/
-.datoAlumna{
-	display: inline-block;
-	vertical-align: top;
-	padding: 1em;
-}
 
 /*Estilizando datos de Overview*/
 #deserters{
@@ -197,4 +233,8 @@ a{
 	background-color: #FDCF77;
 	padding: 0.3em;
 	border-radius: 0.3em;
+}
+
+.linkSelect{
+	background-color: #FDCF77;
 }

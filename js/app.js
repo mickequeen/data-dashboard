@@ -28,16 +28,14 @@ lkstud.addEventListener('click', function(){
 	jedisContainer.classList.add('ocultar');
 	studentsContainer.classList.remove('ocultar');
 
-
-	var contEst= document.getElementById('contEst');
-	/*crear elementos*/
+	/*rescatar contenedor para cada estudiante*/
+	var contEst20172= document.getElementById('contEst2017_2');
 	
 	for(var i=0;i<data.SCL['2017-2'].students.length;i++){
 	
 	/*datos que  con cada ciclo del for*/
 	var nombre= document.createTextNode(data.SCL['2017-2'].students[i].name);
 	var imgSRC= (data.SCL['2017-2'].students[i].photo);
-
 
 	/*elementos, contenedores y clases*/
 	var contInf= document.createElement('div');
@@ -55,11 +53,19 @@ lkstud.addEventListener('click', function(){
 	parrName.appendChild(nombre);
 	contDatos.appendChild(parrName);
 	contInf.appendChild(contDatos);
-	contEst.appendChild(contInf);
+	contEst20172.appendChild(contInf);
 	}
-
-
 })
+
+/*variables para rescatar opciones de selector multiple*/
+var opcion2016_2= document.getElementById('20162');
+var opcion2017_1= document.getElementById('20171');
+var opcion2017_2= document.getElementById('20172');
+
+opcion2016_2.addEventListener('click', function(){
+	alert('ñieaasfdslghfjkfdl');	
+})
+
 
 /*evento al click en link de jedis*/
 lkteach.addEventListener('click', function(){
