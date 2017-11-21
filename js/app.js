@@ -38,7 +38,8 @@ lkstud.addEventListener('click', function(){
 	/*datos que  con cada ciclo del for*/
 	var nombre= document.createTextNode(data.SCL['2017-2'].students[i].name);
 	var imgSRC= (data.SCL['2017-2'].students[i].photo);
-
+	/*var firstSprintTech= document.createTextNode(data.SCL['2017-2'].students[i].sprints[0].score['tech']);
+	var firstSprintHSE= document.createTextNode(data.SCL['2017-2'].students[i].sprints[0].score['hse']);
 
 	/*elementos, contenedores y clases*/
 	var contInf= document.createElement('div');
@@ -49,12 +50,18 @@ lkstud.addEventListener('click', function(){
 	var contDatos= document.createElement('div');
 	contDatos.setAttribute('class', 'datoAlumna')
 	var parrName=document.createElement('p');
+	/*var parrFirstSpr=document.createElement('p');
+	var parrFirstHSE= document.createElement('p');*/
 	parrName.setAttribute('class', 'pName');
 
 	/*dar padres a hijos*/
 	contInf.appendChild(img);
 	parrName.appendChild(nombre);
+	/*parrFirstSpr.appendChild(firstSprintTech);
+	parrFirstHSE.appendChild( firstSprintHSE);*/
 	contDatos.appendChild(parrName);
+	/*contDatos.appendChild(parrFirstSpr);
+	contDatos.appendChild(parrFirstHSE);*/
 	contInf.appendChild(contDatos);
 
 	contEst20172.appendChild(contInf);
