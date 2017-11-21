@@ -116,19 +116,23 @@ lkstud.addEventListener('click', function(){
 	var opcion2016_2= document.getElementById('20162');
 	var opcion2017_1= document.getElementById('20171');
 	var opcion2017_2= document.getElementById('20172');
+	var titulo= document.getElementById('generacionEst');
 
 	opcion2016_2.addEventListener('click', function(){
+		titulo.innerHTML='Generación SCL 2016-2';
 		contEst20162.classList.remove('ocultar');
 		contEst20171.classList.add('ocultar');
 		contEst20172.classList.add('ocultar');	
 
 	})
 	opcion2017_1.addEventListener('click', function(){
+		titulo.innerHTML='Generación SCL 2017-1';
 		contEst20162.classList.add('ocultar');
 		contEst20171.classList.remove('ocultar');
 		contEst20172.classList.add('ocultar');	
 	});
 	opcion2017_2.addEventListener('click', function(){
+		titulo.innerHTML='Generación SCL 2017-2';
 		contEst20162.classList.add('ocultar');
 		contEst20171.classList.add('ocultar');
 		contEst20172.classList.remove('ocultar');	
