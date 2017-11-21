@@ -155,8 +155,6 @@ lkstud.addEventListener('click', function(){
 });
 
 
-
-
 /*evento al click en link de jedis*/
 lkteach.addEventListener('click', function(){
 	overContainer.classList.add('ocultar');
@@ -177,155 +175,40 @@ lkover.addEventListener('click', function(){
 	lkteach.classList.remove('select');
 })
 
-
-/*Overview SCL17-2*/
-
-var deserters = document.getElementById("deserters");
- 
-/*Recorro  a las alumnas dentro de la base de datos,
-para saber cuantas han desertado*/
-
-var activeStudents=[];
-
-for (var i=0; i<data.SCL['2017-2'].students.length;i++){
-activeStudents.push(data.SCL['2017-2'].students[i].active);
-}
+/*evento de click a elementos de overview*/
+var lkovGen6_2= document.getElementById('ovGen6_2');
+var lkovGen7_1= document.getElementById('ovGen7_1');
+var lkovGen7_2= document.getElementById('ovGen7_2');
+var contGraf6_2= document.getElementById('2016__2');
+var contGraf7_1= document.getElementById('2017__1');
+var contGraf7_2= document.getElementById('2017__2');
 
 
-var contInactivas=0;
-var contActivas=0;
+/*evento al hacer click en link de generacion 2016-2 en overview*/
+lkovGen6_2.addEventListener('click', function(){
+	contGraf6_2.classList.remove('ocultar');
+	contGraf7_1.classList.add('ocultar');
+	contGraf7_2.classList.add('ocultar');
+	lkovGen6_2.classList.add('select');
+	lkovGen7_1.classList.remove('select');
+	lkovGen7_2.classList.remove('select');
+})
+/*evento al click de link gen 2017-1 en overview*/
 
-for(var i=0; i<activeStudents.length;i++){
-if(activeStudents[i]==false){
-contInactivas++
-}if(activeStudents[i]==true){
-contActivas++
-}
-}
-var total=contActivas+contInactivas;
+lkovGen7_1.addEventListener('click', function(){
+	contGraf6_2.classList.add('ocultar');
+	contGraf7_1.classList.remove('ocultar');
+	contGraf7_2.classList.add('ocultar');
+	lkovGen6_2.classList.remove('select');
+	lkovGen7_1.classList.add('select');
+	lkovGen7_2.classList.remove('select');
+})
 
-/*crear elementos*/
-var inactivas= document.createTextNode('Alumnas inactivas: ' + contInactivas);
-var activas= document.createTextNode('Alumnas activas : ' + contActivas);
-var totalTXT= document.createTextNode('Total de alumnas : ' +total);
-var parrafo1= document.createElement('p');
-var parrafo2= document.createElement('p');
-var parrafo3= document.createElement('p');
-var gen20172= document.createElement('div');
-
-/*dar hijos a padres*/
-parrafo1.appendChild(inactivas);
-parrafo2.appendChild(activas);
-parrafo3.appendChild(totalTXT);
-gen20172.appendChild(parrafo1);
-gen20172.appendChild(parrafo2);
-gen20172.appendChild(parrafo3);
-deserters.appendChild(gen20172);
-
-
-	
-/*Grafico 1*/
-
-google.load("visualization", "1.0", {
-	"packages": ["corechart"]
-});
-
-google.setOnLoadCallback(dibujar);
-
-function dibujar(){
-
-var data1 = new google.visualization.DataTable();
-data1.addColumn("string", "Alumnas");
-data1.addColumn("number", "Actividad");
-
-data1.addRows(
-	[
-		["Activas [" + contActivas+"]",26],
-
-		["Inactivas ["+ contInactivas+ "]",33],
-    ]
-);
-
-var opciones1 = {
-	title: "Alumnas Generación SCL 2017-2",
-	pieHole: 0.3,
-};
-
-var grafica1 = new google.visualization.PieChart(document.getElementById("chart1"));
-grafica1.draw(data1,opciones1);
-
-}
-
-							/**/
-							
-/*generacion1701*/
-
-var deserters1701 = document.getElementById("deserters1701");
-
-var activeStudents2 = [];
-
-for (var i = 0; i < data.SCL['2017-1'].students.length; i++) {
-	activeStudents2.push(data.SCL['2017-1'].students[i].active);
-}
-var contInactivas2 = 0;
-var contActivas2 = 0;
-
-for (var i = 0; i < activeStudents2.length; i++) {
-	if (activeStudents2[i] == false) {
-		contInactivas2++
-	}
-	if (activeStudents2[i] == true) {
-		contActivas2++
-	}
-}
-var total2 = contActivas2 + contInactivas2;
-
-
-/*crear elementos*/
-var inactivas2 = document.createTextNode('Alumnas inactivas: ' + contInactivas2);
-var activas2 = document.createTextNode('Alumnas activas : ' + contActivas2);
-var totalTXT2 = document.createTextNode('Total de alumnas generación : ' + total2);
-var parrafo3 = document.createElement('p');
-var parrafo4 = document.createElement('p');
-var parrafo5 = document.createElement('p');
-var gen20171 = document.createElement('div');
-
-/*dar hijos a padres*/
-parrafo3.appendChild(inactivas2);
-parrafo4.appendChild(activas2);
-parrafo5.appendChild(totalTXT2);
-gen20171.appendChild(parrafo3);
-gen20171.appendChild(parrafo4);
-gen20171.appendChild(parrafo5);
-deserters1701.appendChild(gen20171);
- 
-/*Gráfico 2*/
-google.load("visualization", "1.0", {
-	"packages": ["corechart"]
-});
-
-google.setOnLoadCallback(dibujar2);
-
-function dibujar2() {
-
-	var data2 = new google.visualization.DataTable();
-	data2.addColumn("string", "Alumnas");
-	data2.addColumn("number", "Actividad");
-
-	data2.addRows(
-		[
-			["Activas", 14],
-
-			["Inactivas", 9],
-		]
-	);
-
-	var opciones2 = {
-		title: "Alumnas",
-		pieHole: 0.3,
-	};
-
-	var grafica2 = new google.visualization.PieChart(document.getElementById("chart2"));
-	grafica2.draw(data2, opciones2);
-
-}
+lkovGen7_2.addEventListener('click', function(){
+	contGraf6_2.classList.add('ocultar');
+	contGraf7_1.classList.add('ocultar');
+	contGraf7_2.classList.remove('ocultar');
+	lkovGen6_2.classList.remove('select');
+	lkovGen7_1.classList.remove('select');
+	lkovGen7_2.classList.add('select');
+})
