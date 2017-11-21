@@ -93,6 +93,7 @@ a{
 	padding: 1em;
 }
 
+
 #listGen{
 	text-align: left;
 }
@@ -110,6 +111,7 @@ a{
 	float: right;
 	width: 50%;
 }
+
 /*tamaño icono lupa*/
 .fa-search{
 	padding-right: 0.5em;
@@ -144,7 +146,7 @@ a{
 
 /*estilo contenedor total de estudiantes*/
 .datos{
-	background-color: red;
+	
 	height: auto;
 	width: 30em;
 	
@@ -180,53 +182,37 @@ a{
     text-align: center;
 }
 
+/*estilo contenedor total de estudiantes*/
+#contEst2017_2{
+	height: auto;
+	width: 30em;
+	float: right;
+}
+
+/*estilo contenedor individual de estudiantes*/
+.studentsContainer{
+	background-color: #FFF;
+	margin: 1em;
+	padding: 1em;
+}
+
+/*estilo contenedor datos*/
+.datoAlumna{
+	display: inline-block;
+	vertical-align: top;
+	padding: 1em;
+}
+
 #links-profile{
 	padding-left: 1em;
 } 
-
-
-/*Estilizando datos de Overview*/
-#deserters{
-	width: 35%;
-    background-color: #E1E1E1;
-    display: inline-block;
-    padding: 1em;
-    vertical-align: top;
-}
- #deserters h1{
-	 color:rgb(41, 39, 39);
-	 border: 1px solid purple;
-	 background-color: rgb(112, 82, 112);
-}
-
- #deserters p{
-	 font-size: 1em; 
- }
-
- /*Grafico inactivas generacion 2017-2*/
-#chart1{
-	background-color: #E1E1E1;
-	width:35% ;
-	display: inline-block;
-	float: right;
-	
-}
-
-#deserters1701 {
-	background-color: #E1E1E1;
-	width:30%;
-}
 
 .profilePicture{
 	height: 9em;
 	width: 9em;
 }
 
-#deserters1701 h1 {
-	color:rgb(41, 39, 39);
-	border: 1px solid purple;
-	background-color: rgb(112, 82, 112);
-}
+
 
 /*color al hacer click*/
 .select{
@@ -237,4 +223,5 @@ a{
 
 .linkSelect{
 	background-color: #FDCF77;
+
 }
