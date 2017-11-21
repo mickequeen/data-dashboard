@@ -60,16 +60,94 @@ lkstud.addEventListener('click', function(){
 	contEst20172.appendChild(contInf);
 
 	}
-})
 
-/*variables para rescatar opciones de selector multiple*/
-var opcion2016_2= document.getElementById('20162');
-var opcion2017_1= document.getElementById('20171');
-var opcion2017_2= document.getElementById('20172');
+	/*contenedor 2017 1*/
+	var contEst20171= document.getElementById('contEst2017_1');
+	
+	for(var i=0;i<data.SCL['2017-1'].students.length;i++){
+	
+	/*datos que  con cada ciclo del for*/
+	var nombre7_1= document.createTextNode(data.SCL['2017-1'].students[i].name);
+	var imgSRC7_1= (data.SCL['2017-1'].students[i].photo);
 
-opcion2016_2.addEventListener('click', function(){
-	alert('ñieaasfdslghfjkfdl');	
-})
+	/*elementos, contenedores y clases*/
+	var contInf7_1= document.createElement('div');
+	contInf7_1.setAttribute('class', 'studentsContainer');
+	var img7_1= document.createElement('img');
+	img7_1.setAttribute('src', imgSRC);
+	img7_1.setAttribute('class', 'profilePicture');
+	var contDatos7_1= document.createElement('div');
+	contDatos7_1.setAttribute('class', 'datoAlumna')
+	var parrName7_1=document.createElement('p');
+	parrName7_1.setAttribute('class', 'pName');
+
+	/*dar padres a hijos*/
+	contInf7_1.appendChild(img7_1);
+	parrName7_1.appendChild(nombre7_1);
+	contDatos7_1.appendChild(parrName7_1);
+	contInf7_1.appendChild(contDatos7_1);
+	contEst20171.appendChild(contInf7_1);
+	}
+
+	/*llenado contenedor 2016-2*/
+	var contEst20162= document.getElementById('contEst2016_2');
+	
+	for(var i=0;i<data.SCL['2016-2'].students.length;i++){
+	
+	/*datos que  con cada ciclo del for*/
+	var nombre6_2= document.createTextNode(data.SCL['2016-2'].students[i].name);
+	var imgSRC6_2= (data.SCL['2016-2'].students[i].photo);
+
+	/*elementos, contenedores y clases*/
+	var contInf6_2= document.createElement('div');
+	contInf6_2.setAttribute('class', 'studentsContainer');
+	var img6_2= document.createElement('img');
+	img6_2.setAttribute('src', imgSRC);
+	img6_2.setAttribute('class', 'profilePicture');
+	var contDatos6_2= document.createElement('div');
+	contDatos6_2.setAttribute('class', 'datoAlumna')
+	var parrName6_2=document.createElement('p');
+	parrName6_2.setAttribute('class', 'pName');
+
+	/*dar padres a hijos*/
+	contInf6_2.appendChild(img6_2);
+	parrName6_2.appendChild(nombre6_2);
+	contDatos6_2.appendChild(parrName6_2);
+	contInf6_2.appendChild(contDatos6_2);
+	contEst20162.appendChild(contInf6_2);
+	}
+
+	/*variables para rescatar opciones de selector multiple*/
+	var opcion2016_2= document.getElementById('20162');
+	var opcion2017_1= document.getElementById('20171');
+	var opcion2017_2= document.getElementById('20172');
+	var titulo= document.getElementById('generacionEst');
+
+	opcion2016_2.addEventListener('click', function(){
+		titulo.innerHTML='Generación SCL 2016-2';
+		contEst20162.classList.remove('ocultar');
+		contEst20171.classList.add('ocultar');
+		contEst20172.classList.add('ocultar');	
+
+	})
+	opcion2017_1.addEventListener('click', function(){
+		titulo.innerHTML='Generación SCL 2017-1';
+		contEst20162.classList.add('ocultar');
+		contEst20171.classList.remove('ocultar');
+		contEst20172.classList.add('ocultar');	
+	});
+	opcion2017_2.addEventListener('click', function(){
+		titulo.innerHTML='Generación SCL 2017-2';
+		contEst20162.classList.add('ocultar');
+		contEst20171.classList.add('ocultar');
+		contEst20172.classList.remove('ocultar');	
+	});
+
+
+
+});
+
+
 
 
 /*evento al click en link de jedis*/
