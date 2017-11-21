@@ -29,8 +29,9 @@ lkstud.addEventListener('click', function(){
 	studentsContainer.classList.remove('ocultar');
 
 
-	var contEst= document.getElementById('contEst');
-	/*crear elementos*/
+	/*rescatar contenedor para cada estudiante*/
+	var contEst20172= document.getElementById('contEst2017_2');
+
 	
 	for(var i=0;i<data.SCL['2017-2'].students.length;i++){
 	
@@ -55,14 +56,21 @@ lkstud.addEventListener('click', function(){
 	parrName.appendChild(nombre);
 	contDatos.appendChild(parrName);
 	contInf.appendChild(contDatos);
-	
-	contEst.appendChild(contInf);
+
+	contEst20172.appendChild(contInf);
+
 	}
-
-
-
-
 })
+
+/*variables para rescatar opciones de selector multiple*/
+var opcion2016_2= document.getElementById('20162');
+var opcion2017_1= document.getElementById('20171');
+var opcion2017_2= document.getElementById('20172');
+
+opcion2016_2.addEventListener('click', function(){
+	alert('ñieaasfdslghfjkfdl');	
+})
+
 
 /*evento al click en link de jedis*/
 lkteach.addEventListener('click', function(){
@@ -207,3 +215,32 @@ gen20171.appendChild(parrafo5);
 deserters1701.appendChild(gen20171);
  
 /*Gráfico 2*/
+google.load("visualization", "1.0", {
+	"packages": ["corechart"]
+});
+
+google.setOnLoadCallback(dibujar2);
+
+function dibujar2() {
+
+	var data2 = new google.visualization.DataTable();
+	data2.addColumn("string", "Alumnas");
+	data2.addColumn("number", "Actividad");
+
+	data2.addRows(
+		[
+			["Activas", 14],
+
+			["Inactivas", 9],
+		]
+	);
+
+	var opciones2 = {
+		title: "Alumnas",
+		pieHole: 0.3,
+	};
+
+	var grafica2 = new google.visualization.PieChart(document.getElementById("chart2"));
+	grafica2.draw(data2, opciones2);
+
+}
